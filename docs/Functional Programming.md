@@ -1,0 +1,3 @@
+- https://www.jstor.org/stable/1968337
+- https://matt.might.net/articles/python-church-y-combinator/
+- https://github.com/TechSolomon/cs331/tree/main/proj5
