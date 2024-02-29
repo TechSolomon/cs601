@@ -1,0 +1,18 @@
+0xA0100003, // r1 = 3  (code starts on line 100, so you can count offsets!)
+0xA0E00005, // your function starts on line 5
+0xC0F00001, // function call
+0xFFC00000, // print result from rC
+0xF0000000, // exit (\/ function begins... \/)
+        0xA0C10000, // Function: load r1 to rC
+        0xA0900000, 0xA0800000, 0xA0700001, 0xA0600001, // [i, x, y, z]
+        0xA0F0000F, // goto COMPARE
+                0xA0990001, //  (i++) -=- LOOP -=-
+                0xA0870000, //  (x=y)
+                0xA0760000, //  (y=z)
+                0xA0678000, //  (z=x+y)
+                0xA0E0000B, // COMPARE
+                0xC0F91000, // if (i<n) goto LOOP
+0xA0C80000, // return (x)
+0xA0E00003, // CHECKPOINT
+0xC0F00002, // ret
+0,0,0,0
