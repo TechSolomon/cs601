@@ -11,9 +11,12 @@ pub fn square(x: i32) -> i32 {
     x * x
 }
 
-fn main() {
+fn example() {
     let _module = Module::from_bc_path("source.bc");
     let version = llvm_ir::llvm_version();
-
     println!(">> LLVM {} -- Intermediate Representation (IR)", version);
+}
+
+fn main() {
+    example();
 }
